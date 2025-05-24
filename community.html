@@ -83,9 +83,9 @@
         <div class="video-grid">
             <!-- First Winner -->
             <div class="gallery-item animate__animated animate__fadeInUp">
-                <div class="media-wrapper">
+                <div class="media-container">
                     <video controls poster="first winner.png">
-                        <source src="winner1-video.mp4" type="video/mp4">
+                        <source src="first winner video.MP4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -96,7 +96,7 @@
             
             <!-- Second Winner -->
             <div class="gallery-item animate__animated animate__fadeInUp animate__delay-1s">
-                <div class="media-wrapper full-image">
+                <div class="media-container">
                     <div class="image-slideshow">
                         <img src="second winner.png" alt="Second Winner" class="active">
                         <img src="second winner video.jpg" alt="Second Winner">
@@ -109,9 +109,9 @@
             
             <!-- Third Winner -->
             <div class="gallery-item animate__animated animate__fadeInUp animate__delay-2s">
-                <div class="media-wrapper">
+                <div class="media-container">
                     <video controls poster="third winner.png">
-                        <source src="winner3-video.mp4" type="video/mp4">
+                        <source src="third winner video.MP4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -122,31 +122,30 @@
         </div>
     </div>
 </section>
-
 <!-- Image Gallery Section -->
 <section class="image-gallery">
     <div class="custom-container">
         <h2 class="section-title animate__animated animate__fadeInLeft">Community Memories</h2>
         <div class="memories-grid">
             <div class="memory-item animate__animated animate__zoomIn">
-                <div class="media-wrapper full-image">
-                    <img src="first winner profile.png" alt="First Winner Profile">
+                <div class="image-container">
+                    <img src="first winner profile.png" alt="First Winner Profile" class="full-image">
                 </div>
                 <div class="memory-caption">
                     <p><strong>First Winner Profile</strong></p>
                 </div>
             </div>
             <div class="memory-item animate__animated animate__zoomIn animate__delay-1s">
-                <div class="media-wrapper full-image">
-                    <img src="second winner profile.png" alt="Second Winner Profile">
+                <div class="image-container">
+                    <img src="second winner profile.png" alt="Second Winner Profile" class="full-image">
                 </div>
                 <div class="memory-caption">
                     <p><strong>Second Winner Profile</strong></p>
                 </div>
             </div>
             <div class="memory-item animate__animated animate__zoomIn animate__delay-2s">
-                <div class="media-wrapper full-image">
-                    <img src="third profile.png" alt="Third Winner Profile">
+                <div class="image-container">
+                    <img src="third profile.png" alt="Third Winner Profile" class="full-image">
                 </div>
                 <div class="memory-caption">
                     <p><strong>Third Winner Profile</strong></p>
@@ -236,11 +235,7 @@
                             </a>
                         </div>
                     </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+            <footer>
     <div class="footer-bottom">
         <div class="copyright">
             &copy; 2025 WorldCoin. All rights reserved.
@@ -253,7 +248,8 @@
         </div>
     </div>
 </footer>
-
+        </section>
+    </main>
     <script src="community.js"></script>
 </body>
 </html>

@@ -225,6 +225,31 @@ body {
     background-color: white;
 }
 
+.custom-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
 .video-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -237,52 +262,40 @@ body {
     flex-direction: column;
     border-radius: var(--border-radius);
     overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
 }
 
-.media-wrapper {
-    position: relative;
+.gallery-item:hover {
+    transform: translateY(-5px);
 }
 
-.media-wrapper.full-image {
-    padding: 20px;
-    background: #f8f8f8;
-}
-
-.media-wrapper.full-image img {
-    max-width: 100%;
-    max-height: 300px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-}
-
-.caption {
-    padding: 1.2rem;
-    text-align: center;
-}
-
-.caption h3 {
-    color: var(--primary-color);
-    margin: 0;
-    font-size: 1.2rem;
-}
-
-/* Image Slideshow */
-.image-slideshow {
+.media-container {
     position: relative;
     width: 100%;
-    height: 300px;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background-color: #f0f0f0;
+    overflow: hidden;
 }
 
+.media-container video,
+.media-container .image-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Image Slideshow Styles */
 .image-slideshow img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -291,7 +304,35 @@ body {
     opacity: 1;
 }
 
-/* Image Gallery Section */
+.caption {
+    padding: 1.2rem;
+    text-align: center;
+    background: white;
+}
+
+.caption h3 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .media-container {
+        padding-bottom: 75%; /* Taller aspect ratio for mobile */
+    }
+}
+
+/* Profile Image Gallery Section */
 .image-gallery {
     padding: 4rem 0;
     background-color: var(--background-color);
@@ -299,7 +340,7 @@ body {
 
 .memories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -311,33 +352,53 @@ body {
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.profile-container {
+    position: relative;
+    width: 100%;
+    height: 380px; /* Fixed height for profile cards */
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: flex-start; /* Align to top */
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top; /* Ensure top alignment */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .memory-caption {
     padding: 1.2rem;
     text-align: center;
     background: white;
+    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .memory-caption p {
     margin: 0;
     font-weight: 600;
     color: var(--primary-color);
+    font-size: 1.1rem;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .video-grid,
     .memories-grid {
         grid-template-columns: 1fr;
     }
     
-    .media-wrapper.full-image {
+    .profile-container {
+        height: 320px; /* Slightly shorter on mobile */
         padding: 15px;
-    }
-    
-    .image-slideshow {
-        height: 250px;
     }
 }
 /* Supporters Section */
