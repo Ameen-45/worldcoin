@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldCoin - Monthly Votes</title>
+    <link rel="stylesheet" href="voting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Add Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="globe-background">
+        <img src="globe.jpg" alt="World Globe" class="globe-img">
+    </div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="worldcoin+logo.png" alt="WorldCoin Logo" class="logo-img">
+                <a href="/home/" class="logo-text">WorldCoin</a>
+            </div>
+            <a href="/" class="logo-text">WorldCoin</a>
+            </div>
+            <div class="nav-links">
+                <a href="/home/">Home</a>
+                <a href="/community/">Community</a>
+                <a href="/donation/" class="active">Donations</a>
+                <a href="/voting/">Monthly Votes</a>
+                <a href="/contact/">Contact</a>
+            </div>
+
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="animate__animated animate__fadeInDown">Monthly Community Vote</h1>
+                <p class="animate__animated animate__fadeInUp">Your voice shapes our charitable initiatives</p>
+            </div>
+        </section>
+
+        <!-- Voting Logo Section -->
+        <section class="voting-logo-section">
+            <div class="container">
+                <div class="voting-logo animate__animated animate__zoomIn">
+                    <i class="fas fa-vote-yea"></i>
+                    <h2>Community Voting</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voting Section -->
+        <section class="vote-section">
+            <div class="container">
+                <div class="section-card animate__animated animate__fadeInLeft">
+                    <h2 class="section-title">Where Should the Monthly Fund Go?</h2>
+                    <div id="vote-status" class="vote-status"></div>
+                    <div class="vote-options">
+                        <!-- Option 1 -->
+                        <div class="vote-item" data-option="0">
+                            <div class="option-letter">A</div>
+                            <div class="option-content">
+                                <div class="option-text">Education for Underprivileged Children</div>
+                                <div class="vote-result">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <div class="vote-info">
+                                        <span class="vote-count">0 votes</span>
+                                        <span class="vote-percent">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Option 2 -->
+                        <div class="vote-item" data-option="1">
+                            <div class="option-letter">B</div>
+                            <div class="option-content">
+                                <div class="option-text">Community Health Initiatives</div>
+                                <div class="vote-result">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <div class="vote-info">
+                                        <span class="vote-count">0 votes</span>
+                                        <span class="vote-percent">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Option 3 -->
+                        <div class="vote-item" data-option="2">
+                            <div class="option-letter">C</div>
+                            <div class="option-content">
+                                <div class="option-text">School Infrastructure Development</div>
+                                <div class="vote-result">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <div class="vote-info">
+                                        <span class="vote-count">0 votes</span>
+                                        <span class="vote-percent">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Loading Indicator -->
+                    <div id="vote-loading" class="loading-indicator" style="display: none;">
+                        <div class="loading-spinner"></div>
+                        <p>Updating votes...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <div class="container">
+                <div class="section-card animate__animated animate__fadeInUp">
+                    <h2 class="section-title">How Voting Works</h2>
+                    <div class="info-content">
+                        <div class="info-item animate__animated animate__fadeIn">
+                            <div class="info-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h3>One Vote Per Person</h3>
+                            <p>Each community member gets one vote per monthly decision</p>
+                        </div>
+                        <div class="info-item animate__animated animate__fadeIn animate__delay-1s">
+                            <div class="info-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Real-time Results</h3>
+                            <p>Watch the results update live as votes come in</p>
+                        </div>
+                        <div class="info-item animate__animated animate__fadeIn animate__delay-2s">
+                            <div class="info-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h3>Monthly Decisions</h3>
+                            <p>New voting options are presented each month</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="footer-bottom">
+        <div class="copyright">
+            &copy; 2025 WorldCoin. All rights reserved.
+        </div>
+        <div class="support-credit">
+            Supported by 
+            <a href="https://t.me/ameen_mujahid" target="_blank" rel="noopener noreferrer">
+                Ameen Mujahid
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Initialize Firebase before your main script -->
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAHNkk5nuaIxDtnWyxpMBg-mB5o62zenrs",
+            authDomain: "worldcoin-voting.firebaseapp.com",
+            databaseURL: "https://worldcoin-voting-default-rtdb.firebaseio.com",
+            projectId: "worldcoin-voting",
+            storageBucket: "worldcoin-voting.appspot.com",
+            messagingSenderId: "567346433702",
+            appId: "1:567346433702:web:a5e30f41d42d8c5961ae67"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <script src="voting.js"></script>
+</body>
+</html>

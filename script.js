@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     intro.classList.add('fade-out');
     
     setTimeout(() => {
-      window.location.href = "home.html"; 
+     window.location.href ="/home/"
     }, 1000);
   }, ANIMATION_DURATION);
 
