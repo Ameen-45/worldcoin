@@ -9,15 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <div class="globe-background">
-        <img src="globe.jpg" alt="World Globe" class="globe-img">
-    </div>
     <header>
-                        <nav class="navbar">
-                            <div class="logo-container">
-                                <img src="worldcoin+logo.png" alt="WorldCoin Logo" class="logo-img" id="animated-logo">
-                            </div>
-                            <a href="/home/" class="logo-text">WorldCoin</a>
+  <nav class="navbar">
+          <div class="logo-container">
+            <img src="worldcoin+logo.png" alt="WorldCoin Logo" class="logo-img" id="animated-logo">
+            </div>
+            <a href="/home/" class="logo-text">WorldCoin</a>
                 <div class="nav-links">
                      <a href="/home/">Home</a>
                     <a href="/community/" class="active">Community</a>
@@ -71,7 +68,7 @@
             <div class="contest-media animate__animated animate__fadeIn">
                 <div class="media-wrapper">
                     <video controls poster="community image.jpg">
-                        <source src="world.MP4" type="video/mp4">
+                        <source src="community video.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -88,13 +85,19 @@
             <!-- First Winner -->
             <div class="gallery-item animate__animated animate__fadeInUp">
                 <div class="media-container">
-                    <video controls poster="first winner.png">
+                    <video controls poster="first winner.png" preload="metadata">
                         <source src="first winner video.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
+                        Your browser does not support HTML5 video.
                     </video>
+                    <div class="play-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                        </svg>
+                    </div>
                 </div>
                 <div class="caption">
-                    <h3><strong>First Winner</strong></h3>
+                    <h3>First Place Winner</h3>
+                    <p class="winner-description">Exceptional creativity in meme craftsmanship</p>
                 </div>
             </div>
             
@@ -102,171 +105,210 @@
             <div class="gallery-item animate__animated animate__fadeInUp animate__delay-1s">
                 <div class="media-container">
                     <div class="image-slideshow">
-                        <img src="second winner.png" alt="Second Winner" class="active">
-                        <img src="second winner video.jpg" alt="Second Winner">
+                        <img src="second winner.png" alt="Second place winner submission" class="active">
+                        <img src="second winner video.jpg" alt="Second place winner alternate view">
                     </div>
                 </div>
                 <div class="caption">
-                    <h3><strong>Second Winner</strong></h3>
+                    <h3>Second Place Winner</h3>
+                    <p class="winner-description">Outstanding viral potential and execution</p>
                 </div>
             </div>
             
             <!-- Third Winner -->
             <div class="gallery-item animate__animated animate__fadeInUp animate__delay-2s">
                 <div class="media-container">
-                    <video controls poster="third winner.png">
+                    <video controls poster="third winner.png" preload="metadata">
                         <source src="third winner video.MP4" type="video/mp4">
-                        Your browser does not support the video tag.
+                        Your browser does not support HTML5 video.
                     </video>
+                    <div class="play-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                        </svg>
+                    </div>
                 </div>
                 <div class="caption">
-                    <h3><strong>Third Winner</strong></h3>
+                    <h3>Third Place Winner</h3>
+                    <p class="winner-description">Excellent concept with strong engagement</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 <!-- Image Gallery Section -->
 <section class="image-gallery">
-    <div class="custom-container">
-        <h2 class="section-title animate__animated animate__fadeInLeft">Community Memories</h2>
+    <div class="gallery-container">
+        <div class="section-header">
+            <h2 class="section-title animate__animated animate__fadeInLeft">Community Memories</h2>
+            <p class="section-subtitle">Celebrating our talented winners and their creative contributions</p>
+        </div>
+        
         <div class="memories-grid">
-            <div class="memory-item animate__animated animate__zoomIn">
+            <!-- First Winner -->
+            <div class="memory-item animate__animated animate__fadeIn">
                 <div class="image-container">
-                    <img src="first winner profile.png" alt="First Winner Profile" class="full-image">
+                    <img src="first winner profile.png" alt="First place winner profile photo" class="full-image" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="winner-badge">🥇 1st Place</span>
+                    </div>
                 </div>
                 <div class="memory-caption">
-                    <p><strong>First Winner Profile</strong></p>
+                    <h3 class="winner-name">First Winner</h3>
+                    <p class="winner-quote">"This experience changed my creative journey"</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="View winner's Instagram"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="View winner's portfolio"><i class="fas fa-telegram"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="memory-item animate__animated animate__zoomIn animate__delay-1s">
+            
+            <!-- Second Winner -->
+            <div class="memory-item animate__animated animate__fadeIn animate__delay-1s">
                 <div class="image-container">
-                    <img src="second winner profile.png" alt="Second Winner Profile" class="full-image">
+                    <img src="second winner profile.png" alt="Second place winner profile photo" class="full-image" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="winner-badge">🥈 2nd Place</span>
+                    </div>
                 </div>
                 <div class="memory-caption">
-                    <p><strong>Second Winner Profile</strong></p>
+                    <h3 class="winner-name">Second Winner</h3>
+                    <p class="winner-quote">"An honor to be recognized among such talent"</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="View winner's Instagram"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="View winner's portfolio"><i class="fas fa-telegram"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="memory-item animate__animated animate__zoomIn animate__delay-2s">
+            
+            <!-- Third Winner -->
+            <div class="memory-item animate__animated animate__fadeIn animate__delay-2s">
                 <div class="image-container">
-                    <img src="third profile.png" alt="Third Winner Profile" class="full-image">
+                    <img src="third profile.png" alt="Third place winner profile photo" class="full-image" loading="lazy">
+                    <div class="image-overlay">
+                        <span class="winner-badge">🥉 3rd Place</span>
+                    </div>
                 </div>
                 <div class="memory-caption">
-                    <p><strong>Third Winner Profile</strong></p>
+                    <h3 class="winner-name">Third Winner</h3>
+                    <p class="winner-quote">"Thrilled to be part of this amazing community"</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="View winner's Instagram"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="View winner's portfolio"><i class="fas fa-telegram"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-        <!-- Community Supporters Section -->
-        <section class="supporters-section">
-            <div class="container">
-                <h2 class="section-title animate__animated animate__fadeInRight">Our Valued Supporters</h2>
-                <p class="section-subtitle">These incredible individuals have helped shape WorldCoin into what it is today.</p>
-                
-                <div class="supporters-grid">
-                    <div class="supporter-card animate__animated animate__fadeIn">
-                        <div class="supporter-img">
-                            <img src="maestro.jpg" alt="Maestro">
-                        </div>
-                        <h3>Maestro</h3>
-                        <p class="supporter-role">Community Builder</p>
-                        <p class="supporter-bio">Maestro has been a valued member of the community since the early days, helping us grow by sharing content on X and connecting with other crypto-minded individuals across various platforms.</p>
-                    </div>
-                    
-                    <div class="supporter-card animate__animated animate__fadeIn animate__delay-1s">
-                        <div class="supporter-img">
-                            <img src="mikky.jpg" alt="Mikky Wurld">
-                        </div>
-                        <h3>Mikky Wurld</h3>
-                        <p class="supporter-role">Early Supporter</p>
-                        <p class="supporter-bio">Mikky Wurld was one of the very first supporters of the project, contributing ideas and playing a key role in our exponential growth. Their unwavering support and efforts in team building have been truly invaluable.</p>
-                    </div>
-                    
-                    <div class="supporter-card animate__animated animate__fadeIn animate__delay-2s">
-                        <div class="supporter-img">
-                            <img src="sonia.jpg" alt="Sonia">
-                        </div>
-                        <h3>Sonia</h3>
-                        <p class="supporter-role">Raid Team Leader</p>
-                        <p class="supporter-bio">Honourable mention goes to Sonia, our incredible raid team leader. Her recent surge of hard work and dedication has helped propel the project to new heights, showing just how powerful community-driven effort can be.</p>
-                    </div>
-                    
-                    <div class="supporter-card animate__animated animate__fadeIn">
-                        <div class="supporter-img">
-                            <img src="nadia.jpg" alt="Nadia">
-                        </div>
-                        <h3>Nadia</h3>
-                        <p class="supporter-role">Moderator</p>
-                        <p class="supporter-bio">Nadia has been an exceptional moderator since day one—consistently active, positive, and dedicated to making our community channels feel like home. Her welcoming presence and commitment to creating a safe, inclusive space have made a lasting impact.</p>
-                    </div>
-                    
-                    <div class="supporter-card animate__animated animate__fadeIn animate__delay-1s">
-                        <div class="supporter-img">
-                            <img src="rayne.jpg" alt="Rayne">
-                        </div>
-                        <h3>Rayne</h3>
-                        <p class="supporter-role">Event Mastermind</p>
-                        <p class="supporter-bio">Rayne... well, he's Rayne. Always active and the mastermind behind many of our events—he's the reason we launched the meme event and brought it to life with smart planning and solid scheduling. His creativity and drive keep things exciting around here.</p>
-                    </div>
-                    <!-- Mujahid X -->
-            <div class="supporter-card animate__animated animate__fadeIn animate__delay-1s">
-                <div class="supporter-img">
-                    <a href="https://t.me/ameen_mujahid" target="_blank">
-                        <img src="mujahidx.jpg" alt="Mujahid X"><!-- Replace with your actual image -->
-                    </a>
-                </div>
+<!-- Supporters Section -->
+<section class="project-personnel">
+    <div class="container">
+        <h2>Our Valued Supporters</h2>
+        <p>These incredible individuals have helped shape WorldCoin into what it is today.</p>
+        
+        <div class="team-members">
+            <!-- Maestro -->
+            <div class="team-member animate__animated animate__fadeIn">
+                <img src="maestro.jpg" alt="Maestro">
+                <h3>Maestro</h3>
+                <p class="supporter-role">Community Builder</p>
+                <p class="supporter-bio">Helped grow our community by sharing content across platforms.</p>
+            </div>
+            
+            <!-- Mikky Wurld -->
+            <div class="team-member animate__animated animate__fadeIn animate__delay-1s">
+                <img src="mikky.jpg" alt="Mikky Wurld">
+                <h3>Mikky Wurld</h3>
+                <p class="supporter-role">Early Supporter</p>
+                <p class="supporter-bio">One of the very first supporters of the project, contributing ideas and playing a key role in our exponential growth.</p>
+            </div>
+            
+            <!-- Sonia -->
+            <div class="team-member animate__animated animate__fadeIn animate__delay-2s">
+                <img src="sonia.jpg" alt="Sonia">
+                <h3>Sonia</h3>
+                <p class="supporter-role">Raid Team Leader</p>
+                <p class="supporter-bio">Our incredible raid team leader whose hard work and dedication has helped propel the project to new heights.</p>
+            </div>
+            
+            <!-- Nadia -->
+            <div class="team-member animate__animated animate__fadeIn">
+                <img src="nadia.jpg" alt="Nadia">
+                <h3>Nadia</h3>
+                <p class="supporter-role">Moderator</p>
+                <p class="supporter-bio">Exceptional moderator dedicated to making our community channels feel like home since day one.</p>
+            </div>
+            
+            <!-- Rayne -->
+            <div class="team-member animate__animated animate__fadeIn animate__delay-1s">
+                <img src="rayne.jpg" alt="Rayne">
+                <h3>Rayne</h3>
+                <p class="supporter-role">Event Mastermind</p>
+                <p class="supporter-bio">The creative force behind many of our events, bringing innovative ideas to life with smart planning.</p>
+            </div>
+            
+            <!-- Mujahid X -->
+            <div class="team-member animate__animated animate__fadeIn animate__delay-1s">
+                <a href="https://t.me/ameen_mujahid" target="_blank" rel="noopener noreferrer">
+                    <img src="mujahidx.jpg" alt="Mujahid X">
+                </a>
                 <h3>Mujahid X</h3>
                 <p class="supporter-role">Software Developer</p>
-                <p class="supporter-bio">
-                    Mujahid X is a talented software developer and an essential collaborator behind this website. His coding skills, innovative thinking, and collaborative spirit helped bring the project to life. Reach out on Telegram to connect or work together on something great.
-                </p>
+                <p class="supporter-bio">Talented developer and essential collaborator behind this website. Reach out to connect or collaborate.</p>
             </div>
-         </div>
-
-                
-                <div class="community-message animate__animated animate__fadeInUp">
-                    <p>"And of course, to the entire community—there are so many others I wish to recognize. I'm truly grateful for each and every one of you. Your energy, support, and ongoing activity mean the world. From the bottom of my heart, thank you."</p>
-                    <p class="signature">// WorldCoin Dev</p>
-                </div>
-            </div>
-        </section>
+        </div>
+        
+        <div class="community-appreciation animate__animated animate__fadeInUp">
+            <p>"And of course, to the entire community—there are so many others I wish to recognize. I'm truly grateful for each and every one of you. Your energy, support, and ongoing activity mean the world. From the bottom of my heart, thank you."</p>
+            <p class="signature">// WorldCoin Dev</p>
+        </div>
+    </div>
+</section>
 
         <!-- Join Community Section -->
-        <section class="join-community">
-            <div class="container">
-                <h2 class="section-title animate__animated animate__fadeInLeft">Join Our Growing Community</h2>
-                <div class="join-content">
-                    <div class="join-text animate__animated animate__fadeIn">
-                        <p>Become part of something bigger. Connect with like-minded individuals, share your ideas, and help shape the future of WorldCoin.</p>
-                        <p>Our community is open to everyone who shares our vision of decentralized innovation and financial freedom.</p>
-                        <div class="social-links">
-                            <a href="https://t.me/WorldCoin86" class="social-link telegram animate__animated animate__bounceIn">
-                                <i class="fab fa-telegram"></i> Telegram
-                            </a>
-                            <a href="https://twitter.com/world_coin58?s=21" class="social-link twitter animate__animated animate__bounceIn animate__delay-1s">
-                                <i class="fab fa-twitter"></i> Twitter
-                            </a>
-                            <a href="https://discord.gg/worldcoin" class="social-link discord animate__animated animate__bounceIn animate__delay-2s">
-                                <i class="fab fa-discord"></i> Discord
-                            </a>
-                        </div>
-                    </div>
-            <footer>
-    <div class="footer-bottom">
-        <div class="copyright">
-            &copy; 2025 WorldCoin. All rights reserved.
+<section class="join-community">
+    <div class="community-container">
+        <h2 class="section-title animate__animated animate__fadeInLeft">Join Our Growing Community</h2>
+        <div class="join-content">
+            <div class="join-text animate__animated animate__fadeIn">
+                <p class="community-description">Become part of something bigger. Connect with like-minded individuals, share your ideas, and help shape the future of WorldCoin.</p>
+                <p class="community-description">Our community is open to everyone who shares our vision of decentralized innovation and financial freedom.</p>
+                <div class="social-links">
+                    <a href="https://t.me/WorldCoin86" class="social-link telegram animate__animated animate__bounceIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </a>
+                    <a href="https://twitter.com/world_coin58?s=21" class="social-link twitter animate__animated animate__bounceIn animate__delay-1s" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="https://discord.gg/worldcoin" class="social-link discord animate__animated animate__bounceIn animate__delay-2s" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-discord"></i> Discord
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="support-credit">
-            Supported by 
-            <a href="https://t.me/ameen_mujahid" target="_blank" rel="noopener noreferrer">
-                Ameen Mujahid
-            </a>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2025 WorldCoin. All rights reserved.
+            </div>
+            <div class="support-credit">
+                Supported by 
+                <a href="https://t.me/ameen_mujahid" target="_blank" rel="noopener noreferrer">
+                    Ameen Mujahid
+                </a>
+            </div>
         </div>
     </div>
 </footer>
-        </section>
+
     </main>
     <script src="community.js"></script>
 </body>

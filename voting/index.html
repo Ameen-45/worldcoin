@@ -14,9 +14,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
 </head>
 <body>
-    <div class="globe-background">
-        <img src="globe.jpg" alt="World Globe" class="globe-img">
-    </div>
     
     <header>
         <nav class="navbar">
@@ -24,13 +21,11 @@
                 <img src="worldcoin+logo.png" alt="WorldCoin Logo" class="logo-img">
                 <a href="/home/" class="logo-text">WorldCoin</a>
             </div>
-            <a href="/" class="logo-text">WorldCoin</a>
-            </div>
             <div class="nav-links">
                 <a href="/home/">Home</a>
                 <a href="/community/">Community</a>
-                <a href="/donation/" class="active">Donations</a>
-                <a href="/voting/">Monthly Votes</a>
+                <a href="/donation/">Donations</a>
+                <a href="/voting/">Votes</a>
                 <a href="/contact/">Contact</a>
             </div>
 
@@ -43,6 +38,16 @@
     </header>
 
     <main>
+        <!-- Voting Logo Section -->
+<section class="voting-logo-section">
+    <div class="container">
+        <div class="voting-logo animate__animated animate__zoomIn">
+            <img src="voting.jpg" alt="Voting Logo" class="voting-logo-img">
+            <h2>Community Votes</h2>
+        </div>
+    </div>
+</section>
+
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
@@ -50,16 +55,26 @@
                 <p class="animate__animated animate__fadeInUp">Your voice shapes our charitable initiatives</p>
             </div>
         </section>
-
-        <!-- Voting Logo Section -->
-        <section class="voting-logo-section">
-            <div class="container">
-                <div class="voting-logo animate__animated animate__zoomIn">
-                    <i class="fas fa-vote-yea"></i>
-                    <h2>Community Voting</h2>
-                </div>
+        <!-- Voting Video Section -->
+<section class="voting-video-section">
+    <div class="container">
+        <div class="voting-video animate__animated animate__fadeIn">
+            <div class="video-header">
+                <i class="fas fa-play-circle"></i>
+                <h2>Our Voting Process</h2>
             </div>
-        </section>
+            <div class="video-container">
+                <video controls class="voting-video-player" poster="voting-poster.jpg">
+                    <source src="voting.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+            <div class="video-caption">
+                <p>Watch how community voting shapes our initiatives</p>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Voting Section -->
         <section class="vote-section">
@@ -163,18 +178,18 @@
     </main>
 
     <footer>
-    <div class="footer-bottom">
-        <div class="copyright">
-            &copy; 2025 WorldCoin. All rights reserved.
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2025 WorldCoin. All rights reserved.
+            </div>
+            <div class="support-credit">
+                Supported by 
+                <a href="https://t.me/ameen_mujahid" target="_blank" rel="noopener noreferrer">
+                    Ameen Mujahid
+                </a>
+            </div>
         </div>
-        <div class="support-credit">
-            Supported by 
-            <a href="https://t.me/ameen_mujahid" target="_blank" rel="noopener noreferrer">
-                Ameen Mujahid
-            </a>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- Initialize Firebase before your main script -->
     <script>

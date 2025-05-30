@@ -12,28 +12,28 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo-container">
-                <div class="logo-circle">
-                    <img src="worldcoin+logo.png" alt="WorldCoin Logo" class="logo-img">
-                </div>
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-circle">
+                <img src="worldcoin+logo.png" alt="WorldCoin Logo" class="logo-img">
+            </div>
             <a href="/home/" class="logo-text">WorldCoin</a>
-            </div>
-            <div class="nav-links">
-                <a href="/home/">Home</a>
-                <a href="/community/">Community</a>
-                <a href="/donation/">Donations</a>
-                <a href="/voting/">Monthly Votes</a>
-                <a href="/contact/">Contact</a>
-            </div>
+        </div>
+        <div class="nav-links">
+            <a href="/home/">Home</a>
+            <a href="/community/">Community</a>
+            <a href="/donation/">Donations</a>
+            <a href="/voting/">Votes</a>
+            <a href="/contact/">Contact</a>
+        </div>
 
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </header>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+</header>
 
     <section class="mission">
     <div class="container">
@@ -67,9 +67,10 @@
 
     <section class="how-it-works">
     <div class="container">
+        <div class="works">
         <h2>The WorldCoin Ecosystem</h2>
         <p class="section-intro">At WorldCoin, we've built more than just a cryptocurrency - we've created a self-sustaining ecosystem where financial transactions generate real-world impact. Here's how our unique model operates:</p>
-        
+        </div>
         <div class="steps">
             <div class="step">
                 <div class="step-icon"><i class="fas fa-percentage"></i></div>
@@ -123,26 +124,27 @@
     </div>
 </section>
 
-   <section class="worldcoin-donations">
-    <!-- Hero Image - Full Visible -->
-    <div class="donation-hero-image">
-        <img src="donation.png" alt="WorldCoin making a difference through donations">
+  <section class="worldcoin-donations">
+    <!-- Centered Uncropped Image -->
+    <div class="donation-image-container">
+        <img src="donation.png" alt="WorldCoin making a difference through donations" class="donation-image">
     </div>
 
     <div class="container">
-        <h2>Make an Impact with WorldCoin</h2>
-        
         <div class="donation-intro">
+            <h2>Make an Impact with WorldCoin</h2>
             <p>Join us in creating real change through crypto donations. Your contribution goes directly to verified causes making a difference worldwide.</p>
         </div>
         
-        <!-- Video Section - No Side Padding -->
-        <div class="donation-video-full">
-            <video controls poster="movie.png">
-                <source src="world.MP4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-            <p class="video-caption">See how WorldCoin donations create impact</p>
+        <!-- Video Section -->
+        <div class="donation-video-container">
+            <div class="donation-video-full">
+                <video controls poster="movie.png">
+                    <source src="world.MP4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <p class="video-caption">See how WorldCoin donations create impact</p>
+            </div>
         </div>
 
         <div class="donation-features">
@@ -191,8 +193,10 @@
             <!-- Text Column -->
             <div class="about-text">
                 <h2>Who We Are</h2>
+                <div class="text">
                 <p class="intro">We are a global movement of innovators, philanthropists, and blockchain enthusiasts united by a shared vision: leveraging cryptocurrency to create lasting positive change.</p>
-                
+                </div>
+             </div>
                 <div class="about-points">
                     <div class="point">
                         <div class="point-icon">
@@ -238,11 +242,6 @@
         <img src="worldcoin+logo.png" alt="Voting Icon" class="voting-icon">
         <h2>What's New</h2>
     </div>
-
-    <div class="content-block">
-        <h3>Our charities</h3>
-        <p>This section is dedicated to recording and acknowledging all charitable donations made in support of individuals and communities in need.</p>
-    </div>
     
     <div class="content-block">
         <h4>Donations Overview</h4>
@@ -276,9 +275,11 @@
 
     <section class="project-personnel">
     <div class="container">
+        <div class="project">
         <h2>Project Personnel</h2>
         <p>Recognizing the exceptional individuals who make our community thrive</p>
-        
+        </div>
+
         <div class="team-members">
             <!-- Rayne -->
             <div class="team-member">
@@ -328,7 +329,7 @@
             <!-- Mujahid X -->
         <div class="team-member">
             <a href="https://t.me/ameen_mujahid" target="_blank">
-                <img src="mujahidx.jpg" alt="Mujahid X"><!-- Replace "your-image.jpg" with your actual image file -->
+                <img src="mujahidx.jpg" alt="Mujahid X">
             </a>
             <h3>Mujahid X</h3>
             <p>Mujahid X is a highly skilled software developer and a collaborative force behind this website. His technical expertise, forward-thinking mindset, and dedication to innovation have significantly shaped the user experience and functionality. Always open to connect and build meaningful digital solutions.</p>
