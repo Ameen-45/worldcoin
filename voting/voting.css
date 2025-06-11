@@ -129,7 +129,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     padding: 2.5rem;
     border-radius: 50%;

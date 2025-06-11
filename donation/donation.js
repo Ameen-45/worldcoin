@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     donateButtons.forEach(button => {
         button.addEventListener('click', function() {
-            window.open('https://solscan.io/account/6wQj3gAcVTnpy1svqczZtS5CE8mkUuWUcXxNqiFWBdGF', '_blank');
+            window.open('https://solscan.io/account/aKZS9PcMMSwfGQTCkAUoAA4ivgzKVCyQjADaTSxBa5V', '_blank');
         });
     });
     
